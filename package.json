@@ -1,0 +1,36 @@
+{
+  "name": "view-on-steroids",
+  "version": "1.0.0",
+  "description": "React-native view with steroids",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "watch": "npx tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vko-online/pane.git"
+  },
+  "keywords": [
+    "react-native",
+    "view",
+    "steroid",
+    "component"
+  ],
+  "author": "Medet Tleukabiluly <m.tleukabiluly@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vko-online/pane/issues"
+  },
+  "homepage": "https://github.com/vko-online/pane#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-native": "^0.59.9",
+    "tslint": "^5.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.5.2"
+  }
+}
