@@ -1,13 +1,9 @@
 import React from 'react'
-import { View, ViewStyle, SafeAreaView, Platform, ScrollView } from 'react-native'
+import { View, ViewStyle, SafeAreaView, Platform, ViewProps } from 'react-native'
 
-interface PaneProps extends ViewStyle {
+interface PaneProps extends ViewStyle, ViewProps {
   children: React.ReactNode
   safe?: boolean
-}
-
-interface ScrollPaneProps extends ViewStyle {
-  children: React.ReactNode
 }
 
 function clean (obj) {
@@ -36,16 +32,6 @@ const Pane: React.FC<PaneProps> = ({ children, safe, ...props }: PaneProps) => {
   }
 
   return view
-}
-
-export const ScrollPane: React.FC<PaneProps> = ({ children, ...props }: ScrollPaneProps) => {
-  const style = clean(props)
-
-  return (
-    <ScrollView contentContainerStyle={style}>
-      {children}
-    </ScrollView>
-  )
 }
 
 export const Hpane: React.FC<PaneProps> = ({ children, ...props }) => (

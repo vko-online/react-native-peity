@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/vko-online/pane#readme",
   "dependencies": {
+    "@types/react": "^16.8.22",
+    "@types/react-native": "^0.57.64",
     "react": "^16.8.6",
     "react-native": "^0.59.9",
     "tslint": "^5.18.0",
