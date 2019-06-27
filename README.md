@@ -2,7 +2,18 @@
 
 Add style props to predefined view
 
-I was tired of adding `styles.something` styles to components, even it's very small, so i created this simple component that accepts style properties as props
+
+We all use this, very annoying right?
+```
+<View>pets</View>
+const styles = StyleSheet.create({
+  paddingLeft: 10
+})
+```
+What about this? Easy-peasy
+```
+<Pane paddingLeft={10}>pets</Pane>
+```
 
 ### installation
 ```
