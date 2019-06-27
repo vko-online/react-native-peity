@@ -44,11 +44,6 @@ var Pane = function (_a) {
     }
     return view;
 };
-exports.ScrollPane = function (_a) {
-    var children = _a.children, props = __rest(_a, ["children"]);
-    var style = clean(props);
-    return (react_1.default.createElement(react_native_1.ScrollView, { contentContainerStyle: style }, children));
-};
 exports.Hpane = function (_a) {
     var children = _a.children, props = __rest(_a, ["children"]);
     return (react_1.default.createElement(Pane, __assign({ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' }, props), children));
