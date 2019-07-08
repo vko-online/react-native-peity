@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   paddingLeft: 10
 })
 ```
-What about this? Easy-peasy
+What about this? Easy-Peasy
 ```
 <Pane paddingLeft={10}>pets</Pane>
 ```
@@ -82,7 +82,7 @@ const demo3 = (
   </Vpane>
 )
 
-// fullscreen pane
+// full screen pane
 const demo4 = (
   <Scene margin={10} backgroundColor='#fff'>
     <FlatList

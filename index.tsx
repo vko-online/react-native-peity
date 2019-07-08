@@ -16,9 +16,73 @@ function clean (obj) {
 }
 
 const Pane: React.FC<PaneProps> = ({ children, safe, ...props }: PaneProps) => {
-  const style = clean(props)
+  const {
+    accessible,
+    accessibilityLabel,
+    accessibilityRole,
+    accessibilityStates,
+    accessibilityHint,
+    collapsable,
+    needsOffscreenAlphaCompositing,
+    renderToHardwareTextureAndroid,
+    accessibilityViewIsModal,
+    accessibilityActions,
+    onAccessibilityAction,
+    shouldRasterizeIOS,
+    onStartShouldSetResponder,
+    onMoveShouldSetResponder,
+    onResponderEnd,
+    onResponderGrant,
+    onResponderReject,
+    onResponderMove,
+    onResponderRelease,
+    onResponderStart,
+    onResponderTerminationRequest,
+    onResponderTerminate,
+    onStartShouldSetResponderCapture,
+    onMoveShouldSetResponderCapture,
+    onTouchStart,
+    onTouchMove,
+    onTouchEnd,
+    onTouchCancel,
+    onTouchEndCapture,
+    ...otherProps
+  } = props
+  const viewProps = {
+    accessible,
+    accessibilityLabel,
+    accessibilityRole,
+    accessibilityStates,
+    accessibilityHint,
+    collapsable,
+    needsOffscreenAlphaCompositing,
+    renderToHardwareTextureAndroid,
+    accessibilityViewIsModal,
+    accessibilityActions,
+    onAccessibilityAction,
+    shouldRasterizeIOS,
+    onStartShouldSetResponder,
+    onMoveShouldSetResponder,
+    onResponderEnd,
+    onResponderGrant,
+    onResponderReject,
+    onResponderMove,
+    onResponderRelease,
+    onResponderStart,
+    onResponderTerminationRequest,
+    onResponderTerminate,
+    onStartShouldSetResponderCapture,
+    onMoveShouldSetResponderCapture,
+    onTouchStart,
+    onTouchMove,
+    onTouchEnd,
+    onTouchCancel,
+    onTouchEndCapture
+  }
+  const style = clean(otherProps)
+  const paneProps = clean(viewProps)
   const view = (
-    <View style={style}>
+    <View style={style} {...paneProps}>
       {children}
     </View>
   )

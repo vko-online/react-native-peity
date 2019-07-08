@@ -37,8 +37,41 @@ function clean(obj) {
 }
 var Pane = function (_a) {
     var children = _a.children, safe = _a.safe, props = __rest(_a, ["children", "safe"]);
-    var style = clean(props);
-    var view = (react_1.default.createElement(react_native_1.View, { style: style }, children));
+    var accessible = props.accessible, accessibilityLabel = props.accessibilityLabel, accessibilityRole = props.accessibilityRole, accessibilityStates = props.accessibilityStates, accessibilityHint = props.accessibilityHint, collapsable = props.collapsable, needsOffscreenAlphaCompositing = props.needsOffscreenAlphaCompositing, renderToHardwareTextureAndroid = props.renderToHardwareTextureAndroid, accessibilityViewIsModal = props.accessibilityViewIsModal, accessibilityActions = props.accessibilityActions, onAccessibilityAction = props.onAccessibilityAction, shouldRasterizeIOS = props.shouldRasterizeIOS, onStartShouldSetResponder = props.onStartShouldSetResponder, onMoveShouldSetResponder = props.onMoveShouldSetResponder, onResponderEnd = props.onResponderEnd, onResponderGrant = props.onResponderGrant, onResponderReject = props.onResponderReject, onResponderMove = props.onResponderMove, onResponderRelease = props.onResponderRelease, onResponderStart = props.onResponderStart, onResponderTerminationRequest = props.onResponderTerminationRequest, onResponderTerminate = props.onResponderTerminate, onStartShouldSetResponderCapture = props.onStartShouldSetResponderCapture, onMoveShouldSetResponderCapture = props.onMoveShouldSetResponderCapture, onTouchStart = props.onTouchStart, onTouchMove = props.onTouchMove, onTouchEnd = props.onTouchEnd, onTouchCancel = props.onTouchCancel, onTouchEndCapture = props.onTouchEndCapture, otherProps = __rest(props, ["accessible", "accessibilityLabel", "accessibilityRole", "accessibilityStates", "accessibilityHint", "collapsable", "needsOffscreenAlphaCompositing", "renderToHardwareTextureAndroid", "accessibilityViewIsModal", "accessibilityActions", "onAccessibilityAction", "shouldRasterizeIOS", "onStartShouldSetResponder", "onMoveShouldSetResponder", "onResponderEnd", "onResponderGrant", "onResponderReject", "onResponderMove", "onResponderRelease", "onResponderStart", "onResponderTerminationRequest", "onResponderTerminate", "onStartShouldSetResponderCapture", "onMoveShouldSetResponderCapture", "onTouchStart", "onTouchMove", "onTouchEnd", "onTouchCancel", "onTouchEndCapture"]);
+    var viewProps = {
+        accessible: accessible,
+        accessibilityLabel: accessibilityLabel,
+        accessibilityRole: accessibilityRole,
+        accessibilityStates: accessibilityStates,
+        accessibilityHint: accessibilityHint,
+        collapsable: collapsable,
+        needsOffscreenAlphaCompositing: needsOffscreenAlphaCompositing,
+        renderToHardwareTextureAndroid: renderToHardwareTextureAndroid,
+        accessibilityViewIsModal: accessibilityViewIsModal,
+        accessibilityActions: accessibilityActions,
+        onAccessibilityAction: onAccessibilityAction,
+        shouldRasterizeIOS: shouldRasterizeIOS,
+        onStartShouldSetResponder: onStartShouldSetResponder,
+        onMoveShouldSetResponder: onMoveShouldSetResponder,
+        onResponderEnd: onResponderEnd,
+        onResponderGrant: onResponderGrant,
+        onResponderReject: onResponderReject,
+        onResponderMove: onResponderMove,
+        onResponderRelease: onResponderRelease,
+        onResponderStart: onResponderStart,
+        onResponderTerminationRequest: onResponderTerminationRequest,
+        onResponderTerminate: onResponderTerminate,
+        onStartShouldSetResponderCapture: onStartShouldSetResponderCapture,
+        onMoveShouldSetResponderCapture: onMoveShouldSetResponderCapture,
+        onTouchStart: onTouchStart,
+        onTouchMove: onTouchMove,
+        onTouchEnd: onTouchEnd,
+        onTouchCancel: onTouchCancel,
+        onTouchEndCapture: onTouchEndCapture
+    };
+    var style = clean(otherProps);
+    var paneProps = clean(viewProps);
+    var view = (react_1.default.createElement(react_native_1.View, __assign({ style: style }, paneProps), children));
     if (safe) {
         return (react_1.default.createElement(react_native_1.SafeAreaView, { style: { flex: 1 } }, view));
     }
