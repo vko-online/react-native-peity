@@ -1,18 +1,23 @@
-## React-native View with steroids
+## View on steroids
 
-Add style props to predefined view
+Accept inline style props with view props
 
 
-We all use this, very annoying right?
+Using styles const is annoying, specially for simple task
 ```
-<View>pets</View>
+<View style={styles.container} pointerEvents='none'>
+  <MyAwesomeComponent />
+</View>
 const styles = StyleSheet.create({
-  paddingLeft: 10
+  container: {
+    paddingLeft: 10
+  }
 })
 ```
+
 What about this? Easy-Peasy
 ```
-<Pane paddingLeft={10}>pets</Pane>
+<Pane paddingLeft={10} pointerEvents='none'>pets</Pane>
 ```
 
 ### installation
@@ -21,12 +26,14 @@ npm install view-on-steroids
 ```
 
 ### usage
-Add style props to predefined view
+Add style and view props to view
 ```
 import Pane, { Hpane, Vpane, Scene, Footer } from 'view-on-steroids'
 
-// accepts ViewStyleProps as props
-<Pane backgroundColor='red'>any children</Pane>
+// accepts ViewStyleProps and ViewProps as props
+<Pane backgroundColor='red' pointerEvents='none'>
+  children
+</Pane>
 
 // same as Pane, but horizontal
 <Hpane padding={10}>any children</Hpane>
@@ -47,14 +54,14 @@ import { Pane, HPane, Vpane, Scene, Footer, ScrollPane } from 'rn-pane'
 
 // simple pane
 const demo1 = (
-  <Pane padding={10} backgroundColor='red'>
+  <Pane padding={10} backgroundColor='red' onTouchStart={() => false>
     <Text>My text</Text>
   </Pane>
 )
 
 // horizontal pane (flexDirection='row')
 const demo2 = (
-  <Hpane alignItems='center' backgroundColor='blue'>
+  <Hpane alignItems='center' backgroundColor='blue' onTouchStart={() => false>
     <Text>h</Text>
     <Text>o</Text>
     <Text>r</Text>
