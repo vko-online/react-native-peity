@@ -26,11 +26,11 @@
     "url": "https://github.com/vko-online/pane/issues"
   },
   "homepage": "https://github.com/vko-online/pane#readme",
-  "dependencies": {
+  "peerDependencies": {
     "@types/react": "^16.8.22",
     "@types/react-native": "^0.57.64",
-    "react": "^16.8.6",
-    "react-native": "^0.59.9",
+    "react": "*",
+    "react-native": "*",
     "tslint": "^5.18.0",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.5.2"
