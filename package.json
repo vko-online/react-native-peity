@@ -1,38 +1,51 @@
 {
-  "name": "view-on-steroids",
-  "version": "1.6.4",
-  "description": "React-native view with steroids",
-  "main": "./dist/index.js",
+  "name": "react-native-peity",
+  "version": "1.0.0",
+  "description": "Progressive <svg> pie, donut, bar and line charts for React-Native http://benpickles.github.io/peity",
+  "main": "index.js",
   "files": [
-    "dist"
+    "index.js",
+    "index.d.ts",
+    "index.ts"
   ],
   "scripts": {
+    "build": "npx tsc",
     "watch": "npx tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/vko-online/pane.git"
+    "url": "git+ssh://git@github.com/vko-online/react-native-peity.git"
   },
   "keywords": [
     "react-native",
-    "view",
-    "steroid",
-    "component"
+    "peity",
+    "chart",
+    "bar",
+    "line",
+    "donut"
   ],
   "author": "Medet Tleukabiluly <m.tleukabiluly@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vko-online/pane/issues"
+    "url": "https://github.com/vko-online/react-native-peity/issues"
   },
-  "homepage": "https://github.com/vko-online/pane#readme",
+  "homepage": "https://github.com/vko-online/react-native-peity#readme",
   "peerDependencies": {
     "@types/react": "^16.8.22",
     "@types/react-native": "^0.57.64",
     "react": "*",
     "react-native": "*",
+    "react-native-svg": "*",
     "tslint": "^5.18.0",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.5",
+    "@types/react-native": "^0.60.19",
+    "react": "^16.10.2",
+    "react-native": "^0.61.2",
+    "react-native-svg": "^9.11.1"
   }
 }
