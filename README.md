@@ -9,6 +9,8 @@ Port for [peity](https://github.com/benpickles/peity)
 
 ## Basic usage
 
+Works with expo and react-native
+
 ```jsx
 import { Line } from 'react-native-peity'
 
