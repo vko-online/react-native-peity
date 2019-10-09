@@ -24,4 +24,4 @@ import { Line } from 'react-native-peity'
 
 ## Docs
 
-More detailed usage can be found at benpickles.github.io/peity.
+More detailed usage can be found at [benpickles.github.io/peity](https://benpickles.github.io/peity).
