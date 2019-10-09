@@ -36,16 +36,11 @@
     "@types/react-native": "^0.57.64",
     "react": "*",
     "react-native": "*",
-    "react-native-svg": "*",
     "tslint": "^5.18.0",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "@types/react": "^16.9.5",
-    "@types/react-native": "^0.60.19",
-    "react": "^16.10.2",
-    "react-native": "^0.61.2",
     "react-native-svg": "^9.11.1"
   }
 }
